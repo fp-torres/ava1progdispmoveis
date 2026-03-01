@@ -22,9 +22,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".FormActivity" />
+        <activity
+            android:name=".FormActivity"
+            android:parentActivityName=".MainActivity" />
 
-        <activity android:name=".ListaActivity" />
+        <activity
+            android:name=".ListaActivity"
+            android:parentActivityName=".MainActivity" />
 
     </application>
 

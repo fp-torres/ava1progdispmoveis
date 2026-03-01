@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 
 class FormActivity : AppCompatActivity() {
 
@@ -16,14 +17,17 @@ class FormActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_form)
 
+        // CONFIGURAÇÃO DA BARRA E SETA DE VOLTAR
+        val toolbar = findViewById<Toolbar>(R.id.toolbarForm)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val etNome = findViewById<EditText>(R.id.etNome)
         val etData = findViewById<EditText>(R.id.etData)
         val btnConfirmar = findViewById<Button>(R.id.btnConfirmar)
 
-        // Adiciona máscara de data
         addMascaraData(etData)
 
-        // Verifica se é edição
         agendamentoId = intent.getLongExtra("id_agendamento", 0L)
 
         if (agendamentoId != 0L) {
@@ -53,6 +57,11 @@ class FormActivity : AppCompatActivity() {
                 Toast.makeText(this, "Preencha tudo corretamente", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 
     private fun addMascaraData(editText: EditText) {
