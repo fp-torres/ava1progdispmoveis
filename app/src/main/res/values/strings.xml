@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">AgendamentoClinica</string>
+
+    <string name="app_name_titulo">Clínica Saúde Vital</string>
+
+    <string name="btn_agendar">AGENDAR CONSULTA</string>
+    <string name="btn_lista">VER AGENDAMENTOS</string>
+
+    <string name="hint_nome">Nome do Paciente</string>
+    <string name="hint_data">Data da Consulta (DD/MM/AAAA)</string>
+    <string name="btn_confirmar">CONFIRMAR AGENDAMENTO</string>
+    <string name="btn_atualizar">ATUALIZAR AGENDAMENTO</string>
+
+    <string name="msg_sucesso">Agendamento salvo com sucesso!</string>
+    <string name="msg_erro">Preencha todos os campos corretamente</string>
+
+    <string name="desc_deletar">Excluir agendamento</string>
 </resources>
